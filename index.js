@@ -1,16 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-
-function Comment (props) {
-  return (
-    <div>
-      <p>{props.name}</p>
-      <p>{props.body}</p>
-    </div>
-  )
-}
+import {Router, Route, hashHistory} from 'react-router';
+import CommentBox from './components/commentbox.js';
 
 render(
-  <Comment name='Amanda' body='It works!' />,
-  document.getElementById('comment-box')
+    <CommentBox/>,
+    document.getElementById('comment-box')
 );
