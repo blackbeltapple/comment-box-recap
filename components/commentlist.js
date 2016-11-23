@@ -6,9 +6,11 @@ const CommentList = React.createClass({
   render: function () {
     return (
       <div>
+        <label className="label">Comments</label>
+
         {
           this.props.comments.map(function (comment, i) {
-            return <Comment key={i} name={comment.name} body={comment.body} />;
+            return <Comment key={i} {...comment} />;
           })
         }
       </div>

@@ -1,21 +1,27 @@
 import React from 'react';
-//import {render} from 'react-dom';
 
 import CommentList from './commentlist.js';
 import CommentForm from './commentform.js';
 
-
 const CommentBox = React.createClass({
-
+  getInitialState: function () {
+    return {
+      sComments: this.props.comments
+    };
+  },
+  addComment: function (newComment) {
+    console.log('addComment called');
+    this.setState({
+      sComments: this.state.sComments.concat([newComment])
+    });
+  },
   render: function () {
     return (
       <div className='box' >
-        <p>CommentBox</p>
-        <div><CommentList comments={this.props.comments}/></div>
-        <div><CommentForm /></div>
-
+        <label className='label'>CommentBox Application</label>
+        <div><CommentList comments={this.state.sComments} /></div>
+        <div><CommentForm addComment={this.addComment} /></div>
       </div>
-
     );
   }
 });

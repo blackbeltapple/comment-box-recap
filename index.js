@@ -4,8 +4,8 @@ import {Router, Route, hashHistory} from 'react-router';
 import CommentBox from './components/commentbox.js';
 
 const initialComments = [
-  {name: 'Amanda', body: 'What time is it?'},
-  {name: 'Bob', body: 'Lunchtime?'},
+  {name: 'Amanda M', body: 'What time is it?'},
+  {name: 'Bobby', body: 'Lunchtime?'}
 
 ];
 
