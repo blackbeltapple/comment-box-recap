@@ -11,7 +11,7 @@ const CommentBox = React.createClass({
     return (
       <div className='box' >
         <p>CommentBox</p>
-        <div><CommentList /></div>
+        <div><CommentList comments={this.props.comments}/></div>
         <div><CommentForm /></div>
 
       </div>
